@@ -1,0 +1,131 @@
+.products {
+  padding: 75px 0;
+  .container {
+    display: flex;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 195.4%;
+    margin-bottom: 25px;
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+  &__descr {
+    width: 458px;
+    padding: 111px 0;
+    background: #fffdf2;
+    text-align: center;
+  }
+  &__names {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+  }
+  &__name {
+    width: 299px;
+    height: 288px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      .gradient-hover {
+        opacity: 1;
+      }
+      .products__name-text {
+        opacity: 1;
+      }
+    }
+    .gradient {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transition: 0.3s;
+      opacity: 1;
+      background: linear-gradient(
+        180deg,
+        #000000 -10.94%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+    .gradient-hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transition: 0.3s;
+      opacity: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.88),
+        rgba(0, 0, 0, 0.88)
+      );
+    }
+  }
+  &__name-title {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    padding-left: 34px;
+    padding-right: 34px;
+    text-align: center;
+    color: #ffffff;
+  }
+  &__name-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140.4%;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    top: 107px;
+    padding-left: 37px;
+    padding-right: 37px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s;
+  }
+}
+.product__modal {
+  padding-top: 250px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+  &-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  &-title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 140.4%;
+    color: #ffffff;
+    text-align: center;
+    max-width: 650px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 28px;
+  }
+  &-text {
+    max-width: 990px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 195.4%;
+    color: #ffffff;
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,20 @@
+.projects{
+  &__title{
+
+  }
+  .swiper-container{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+   }
+   .swiper-wrapper{
+    display: inline-flex;
+   }
+    .swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 555px;
+    height: 588px;
+   }
+}
