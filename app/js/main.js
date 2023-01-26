@@ -88,36 +88,32 @@ const newsSlider = new Swiper(".header__swiper", {
 
 function mobileMenu() {
   let menuBtn = document.querySelector(".nav-mobile-btn");
-  let headerNavMobile = document.querySelector(".header__nav");
-  // let closeMenuBtn = document.querySelector('.close-menu-btn');
+  let headerNav = document.querySelector(".header__nav");
   let headerNavItem = document.querySelectorAll('.header__nav-item');
   let contactsLink = document.querySelectorAll('.contacts__link');
+  let navRequestBtn = headerNav.querySelector('.request-btn');
 
   menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
-    headerNavMobile.classList.toggle("active");
+    headerNav.classList.toggle("active");
   });
 
   menuBtn.addEventListener('click', () => {
     document.body.classList.add('ov-hidden');
   })
 
-  // closeMenuBtn.addEventListener('click', () => {
-  //   headerNavMobile.classList.toggle("active");
-  //   menuBtn.classList.toggle("active");
-  // })
-
-  // closeMenuBtn.addEventListener('click', () => {
-  //   document.body.classList.remove('ov-hidden');
-  // })
-
   headerNavItem.forEach((elem) => {
     elem.addEventListener('click', () => {
-      headerNavMobile.classList.toggle("active");
+      headerNav.classList.toggle("active");
       menuBtn.classList.toggle("active");
       document.body.classList.remove('ov-hidden');
     })
   })
+
+  navRequestBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    headerNav.classList.toggle("active");
+  });
 }
 mobileMenu();
 

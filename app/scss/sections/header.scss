@@ -19,6 +19,9 @@
     .header__logo{
       display: none;
     }
+    .request-btn{
+      display: none;
+    }
   }
   &__nav-item {
     margin-right: 40px;
@@ -37,8 +40,7 @@
     right: 10px;
     top: 0;
     border-radius: 0px 0px 0px 5px;
-    // display: none;
-    z-index: 15;
+    z-index: -15;
   }
   .nav-mobile-btn {
     width: 37px;
@@ -47,7 +49,6 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 6px;
-    // display: none;
     span {
       width: 24px;
       height: 3px;
@@ -165,7 +166,8 @@
     font-size: 15px;
     line-height: 179.9%;
     color: #ffffff;
-    width: 703px;
+    max-width: 703px;
+    width: 100%;
     margin-bottom: 20px;
   }
   .to-catalog-link {
@@ -187,6 +189,13 @@
   }
 }
 .header.media {
+  @media (max-width: 1630px){
+    .header__swiper{
+      .container{
+      padding-left: 80px;
+    }
+    }
+  }
   @media (max-width: 1326px) {
     .header__logo {
       margin-right: 150px;
@@ -217,6 +226,9 @@
     }
     .to-catalog-link {
       padding: 10px 40px;
+    }
+    .mobile-btn-wrapper{
+      z-index: 15;
     }
   }
   @media (max-width: 1038px) {
@@ -259,6 +271,55 @@
       .header__logo{
         margin-bottom: 40px;
       }
+      .request-btn{
+        display: block;
+        margin: 0 auto;
+        margin-top: auto;
+        margin-bottom: 85px;
+      }
+    }
+  }
+  @media (max-width: 860px){
+    .header__swiper{
+      .container{
+        padding-left: 15px;
+        margin-top: -90px;
+      }
+      .swiper-button-prev{
+        top: auto;
+        left: auto;
+        bottom: 115px;
+        right: 110px;
+      }
+      .swiper-button-next{
+        top: auto;
+        bottom: 115px;
+        right: 40px;
+      }
+      .swiper-pagination{
+        bottom: 85px;
+      }
+      .swiper-pagination-bullet{
+        border: 2px solid #ffffff;
+        margin-right: 8px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  @media (max-width: 600px){
+    .header__title{
+      font-size: 30px;
+      line-height: 115%;
+    }
+  }
+  @media (max-width: 500px){
+    .header__title{
+      font-size: 25px;
+    }
+    .header__text{
+      font-size: 14px;
+      line-height: 165%;
     }
   }
 }
