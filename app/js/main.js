@@ -13,78 +13,78 @@ const newsSlider = new Swiper(".header__swiper", {
   // loop: "infinite",
 });
 
-// let swiper = new Swiper('.swiper-container', {
-//   effect: 'coverflow',
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: 'auto',
-//   coverflowEffect: {
-//     rotate: 0,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 2,
-//     slideShadows : true,
-//     scale: 0.9
-//   },
-//  loop: true
-// });
+let swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows : true,
+    scale: 0.9
+  },
+ loop: true
+});
 
-// function popupProducts() {
-//   const btns = document.querySelectorAll(".products__name");
-//   const modalOverlay = document.querySelector(".modal-overlay ");
-//   const modals = document.querySelectorAll(".modal");
-//   const modalCloseBtn = document.querySelector(".modal__close-btn");
-//   const close = document.querySelectorAll(".close");
+function popupProducts() {
+  const btns = document.querySelectorAll(".products__name");
+  const modalOverlay = document.querySelector(".modal-overlay ");
+  const modals = document.querySelectorAll(".modal");
+  const modalCloseBtn = document.querySelector(".modal__close-btn");
+  const close = document.querySelectorAll(".close");
 
-//   btns.forEach((el) => {
-//     el.addEventListener("click", (e) => {
-//       document.body.classList.add('ov-hidden');
-//       let path = e.currentTarget.getAttribute("data-path");
+  btns.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      document.body.classList.add('ov-hidden');
+      let path = e.currentTarget.getAttribute("data-path");
 
-//       modals.forEach((el) => {
-//         el.classList.remove("modal--visible");
-//       });
+      modals.forEach((el) => {
+        el.classList.remove("modal--visible");
+      });
 
-//       document
-//         .querySelector(`[data-target="${path}"]`)
-//         .classList.add("modal--visible");
-//         modalOverlay.classList.add("modal-overlay--visible");
-//     });
-//   });
+      document
+        .querySelector(`[data-target="${path}"]`)
+        .classList.add("modal--visible");
+        modalOverlay.classList.add("modal-overlay--visible");
+    });
+  });
 
-//   modalOverlay.addEventListener("click", (e) => {
-//     // console.log(e.target);
-//     document.body.classList.remove('ov-hidden');
-//       if (e.target == modalOverlay) {
-//         modalOverlay.classList.remove("modal-overlay--visible");
-//         modals.forEach((el) => {
-//           el.classList.remove("modal--visible");
-//         });
-//       }
-//   });
-// }
-// popupProducts();
+  modalOverlay.addEventListener("click", (e) => {
+    // console.log(e.target);
+    document.body.classList.remove('ov-hidden');
+      if (e.target == modalOverlay) {
+        modalOverlay.classList.remove("modal-overlay--visible");
+        modals.forEach((el) => {
+          el.classList.remove("modal--visible");
+        });
+      }
+  });
+}
+popupProducts();
 
-// function contactHover() {
-//   let btn = document.querySelectorAll('.contact__btn');
-//   let title = document.querySelectorAll('.contact__title');
-//   let icon = document.querySelectorAll('.contact__icon');
-//   let iconHover = document.querySelectorAll('.contact__icon-hover');
+function contactHover() {
+  let btn = document.querySelectorAll('.contact__btn');
+  let title = document.querySelectorAll('.contact__title');
+  let icon = document.querySelectorAll('.contact__icon');
+  let iconHover = document.querySelectorAll('.contact__icon-hover');
 
-//   for (let i = 0; i < btn.length; i++) {
-//     btn[i].addEventListener('mouseover', () => {
-//       title[i].classList.add('hover');
-//       icon[i].classList.add('hover');
-//       iconHover[i].classList.add('hover');
-//     })
-//     btn[i].addEventListener('mouseout', () => {
-//       title[i].classList.remove('hover');
-//       icon[i].classList.remove('hover');
-//       iconHover[i].classList.remove('hover');
-//     })
-//   }
-// }
-// contactHover();
+  for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener('mouseover', () => {
+      title[i].classList.add('hover');
+      icon[i].classList.add('hover');
+      iconHover[i].classList.add('hover');
+    })
+    btn[i].addEventListener('mouseout', () => {
+      title[i].classList.remove('hover');
+      icon[i].classList.remove('hover');
+      iconHover[i].classList.remove('hover');
+    })
+  }
+}
+contactHover();
 
 function mobileMenu() {
   let menuBtn = document.querySelector(".nav-mobile-btn");
@@ -93,13 +93,14 @@ function mobileMenu() {
   let contactsLink = document.querySelectorAll('.contacts__link');
   let navRequestBtn = headerNav.querySelector('.request-btn');
 
-  menuBtn.addEventListener("click", () => {
+  menuBtn.addEventListener("click", (e) => {
     menuBtn.classList.toggle("active");
     headerNav.classList.toggle("active");
+    console.log(e.target.tagName)
   });
 
   menuBtn.addEventListener('click', () => {
-    document.body.classList.add('ov-hidden');
+    document.body.classList.toggle('ov-hidden');
   })
 
   headerNavItem.forEach((elem) => {

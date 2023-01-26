@@ -233,7 +233,13 @@
   }
   @media (max-width: 1038px) {
     .header__top{
-      height: 65px;
+      height: 60px;
+      width: 100%;
+      background: #ffffff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
       .request-btn{
         display: none;
       }

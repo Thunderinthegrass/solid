@@ -89,3 +89,12 @@
 .contacts__btn:hover ~ .contacts__title{
   color: #ff6b00;
 }
+.contacts.media{
+  @media(max-width: 950px) {
+    padding-top: 50px;
+    .contacts__wrapper{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
