@@ -151,6 +151,11 @@
       width: 100%;
     }
   }
+  @media(max-width: 1038px){
+    .product__modal{
+      padding-top: 200px;
+    }
+  }
   @media(max-width: 948px){
     .products__names{
       max-width: 609px;

@@ -33,7 +33,7 @@ function popupProducts() {
   const btns = document.querySelectorAll(".products__name");
   const modalOverlay = document.querySelector(".modal-overlay ");
   const modals = document.querySelectorAll(".modal");
-  const modalCloseBtn = document.querySelector(".modal__close-btn");
+  const modalCloseBtn = document.querySelector(".modal-close-btn");
   const close = document.querySelectorAll(".close");
 
   btns.forEach((el) => {
@@ -61,6 +61,16 @@ function popupProducts() {
           el.classList.remove("modal--visible");
         });
       }
+  });
+
+  modalCloseBtn.addEventListener("click", (e) => {
+    // console.log(e.target);
+    document.body.classList.remove('ov-hidden');
+
+    modalOverlay.classList.remove("modal-overlay--visible");
+    modals.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
   });
 }
 popupProducts();
