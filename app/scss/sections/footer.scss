@@ -1,0 +1,26 @@
+.footer{
+  background: #181310;
+  padding-top: 97px;
+  padding-bottom: 97px;
+  .container{
+    display: flex;
+    align-items: center;
+  }
+  &__logo{
+    margin-right: 180px;
+  }
+  &__nav {
+    display: flex;
+  }
+  &__nav-item {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__nav-link {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

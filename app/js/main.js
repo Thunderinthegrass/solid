@@ -29,7 +29,7 @@ let swiper = new Swiper('.swiper-container', {
  loop: true
 });
 
-function popupForm() {
+function popupProducts() {
   const btns = document.querySelectorAll(".products__name");
   const modalOverlay = document.querySelector(".modal-overlay ");
   const modals = document.querySelectorAll(".modal");
@@ -63,7 +63,28 @@ function popupForm() {
       }
   });
 }
-popupForm();
+popupProducts();
+
+function contactHover() {
+  let btn = document.querySelectorAll('.contact__btn');
+  let title = document.querySelectorAll('.contact__title');
+  let icon = document.querySelectorAll('.contact__icon');
+  let iconHover = document.querySelectorAll('.contact__icon-hover');
+
+  for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener('mouseover', () => {
+      title[i].classList.add('hover');
+      icon[i].classList.add('hover');
+      iconHover[i].classList.add('hover');
+    })
+    btn[i].addEventListener('mouseout', () => {
+      title[i].classList.remove('hover');
+      icon[i].classList.remove('hover');
+      iconHover[i].classList.remove('hover');
+    })
+  }
+}
+contactHover();
 
 // function mobileMenu() {
 //   let menuBtn = document.querySelector(".mobile-btn");

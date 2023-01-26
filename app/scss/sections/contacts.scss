@@ -1,0 +1,91 @@
+.contacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 31px;
+  }
+  .contact {
+    max-width: 351px;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 4.20463px 26.2789px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 115px;
+    position: relative;
+    &__rect {
+      width: 105.12px;
+      height: 105.12px;
+      left: 172.99px;
+      top: 3175.25px;
+      border: 2.10231px solid #bfbfbf;
+      filter: blur(2.62789px);
+      border-radius: 100%;
+      margin-bottom: 16px;
+    }
+    &__icon {
+      position: absolute;
+      top: 51px;
+      opacity: 1;
+      transition: 0.3s;
+      &.hover{
+        opacity: 0;
+      }
+    }
+    &__icon-hover {
+      position: absolute;
+      top: 51px;
+      opacity: 0;
+      transition: 0.3s;
+      &.hover{
+        opacity: 1;
+      }
+    }
+    &__title {
+      font-weight: 800;
+      font-size: 26.2789px;
+      line-height: 120.9%;
+      margin-bottom: 11px;
+      transition: .3s;
+      &.hover{
+        color: #ff6b00;
+      }
+    }
+    &__link {
+      font-weight: 400;
+      font-size: 14.7162px;
+      line-height: 157.4%;
+      margin-bottom: 9px;
+      color: #000000;
+    }
+    &__btn {
+      position: absolute;
+      bottom: 31px;
+      border: 1px solid #ff6b00;
+      filter: drop-shadow(0px 4px 25px rgba(255, 107, 0, 0.3));
+      border-radius: 52px;
+      padding: 16px 51px;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 18px;
+      color: #ff6b00;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        color: #ffffff;
+        background: #ff6b00;
+      }
+    }
+  }
+}
+.contacts__btn:hover ~ .contacts__title{
+  color: #ff6b00;
+}
