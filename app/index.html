@@ -15,7 +15,7 @@
   <header class="header media">
     <div class="header__top">
       <div class="container">
-        <a href="#" class="header__logo">
+        <a href="#header" class="header__logo">
           <img src="img/svg/header/top/logo.svg" alt="логотип">
         </a>
         <div class="mobile-btn-wrapper">
@@ -29,17 +29,17 @@
           <a href="#" class="header__logo">
             <img src="img/svg/header/top/logo.svg" alt="логотип">
           </a>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Главная</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Продукция</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Проекты</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Партнеры</a></li>
-          <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+          <li class="header__nav-item"><a href="#header" class="header__nav-link">Главная</a></li>
+          <li class="header__nav-item"><a href="#products" class="header__nav-link">Продукция</a></li>
+          <li class="header__nav-item"><a href="#projects" class="header__nav-link">Проекты</a></li>
+          <li class="header__nav-item"><a href="#partners" class="header__nav-link">Партнеры</a></li>
+          <li class="header__nav-item"><a href="#contacts" class="header__nav-link">Контакты</a></li>
           <div class="request-btn">Оставить заявку</div>
         </ul>
         <button class="request-btn">Оставить заявку</button>
       </div>
     </div>
-    <div class="header__swiper">
+    <div class="header__swiper" id="header">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="container">
@@ -108,7 +108,7 @@
     </div>
   </header>
   <main class="main">
-    <section class="products media">
+    <section class="products media" id="products">
       <div class="container">
         <div class="products__descr">
           <h2 class="products__title">Наша продукция</h2>
@@ -188,6 +188,9 @@
       </div>
     </section>
     <div class="modal-overlay">
+      <button class="close-btn">
+        <img src="img/svg/close.svg" alt="">
+      </button>
       <div class="product__modal modal" data-target="product-1">
         <div class="container">
           <div class="product__modal-logo">
@@ -267,7 +270,7 @@
         </div>
       </div>
     </div>
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="container">
         <h2 class="projects__title">Наши проекты</h2>
         <div class="swiper-container">
@@ -293,7 +296,7 @@
         </div>
       </div>
     </section>
-    <section class="partners media">
+    <section class="partners media" id="partners">
       <div class="container">
         <h2 class="partners__title">
           Партнеры
@@ -329,7 +332,7 @@
         <button class="request-btn">Стать партнером</button>
       </div>
     </section>
-    <section class="contacts media">
+    <section class="contacts media" id="contacts">
       <div class="container">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__wrapper">

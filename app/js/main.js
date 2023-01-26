@@ -118,6 +118,22 @@ function mobileMenu() {
 }
 mobileMenu();
 
+function scrollToLink() {
+  const anchors = document.querySelectorAll('a[href*="#"]');
+
+  for (let anchor of anchors) {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const blockID = anchor.getAttribute("href");
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+}
+scrollToLink();
+
 // function popupForm() {
 //   const btns = document.querySelectorAll(".modal-btn");
 //   const modalOverlay = document.querySelector(".modal-overlay ");
@@ -243,22 +259,6 @@ mobileMenu();
 
 // }
 // tabs();
-
-// function scrollToLink() {
-//   const anchors = document.querySelectorAll('a[href*="#"]');
-
-//   for (let anchor of anchors) {
-//     anchor.addEventListener("click", function (event) {
-//       event.preventDefault();
-//       const blockID = anchor.getAttribute("href");
-//       document.querySelector("" + blockID).scrollIntoView({
-//         behavior: "smooth",
-//         block: "start",
-//       });
-//     });
-//   }
-// }
-// scrollToLink();
 
 
 // function joinForm() {
