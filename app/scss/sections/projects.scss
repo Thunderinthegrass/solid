@@ -17,5 +17,39 @@
     background-size: cover;
     width: 555px;
     height: 588px;
-   }
+    img{
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.projects.media{
+  @media(max-width:744px) {
+    .swiper-slide{
+      width: 500px;
+      height: 520px;
+    }
+    .swiper-container{
+      padding-top: 10px;
+    }
+  }
+  @media(max-width:600px) {
+    .swiper-slide{
+      width: 400px;
+      height: 420px;
+    }
+  }
+  @media(max-width:530px) {
+    .swiper-slide{
+      width: 350px;
+      height: 360px;
+    }
+  }
+  @media(max-width:430px) {
+    .swiper-slide{
+      width: 300px;
+      height: 350px;
+    }
+  }
 }

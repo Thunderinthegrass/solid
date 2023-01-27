@@ -34,6 +34,8 @@
     &__icon {
       position: absolute;
       top: 51px;
+      left: 50%;
+      transform: translateX(-50%);
       opacity: 1;
       transition: 0.3s;
       &.hover{

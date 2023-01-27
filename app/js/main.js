@@ -13,6 +13,22 @@ const newsSlider = new Swiper(".header__swiper", {
   // loop: "infinite",
 });
 
+// let swiper = new Swiper('.swiper-container', {
+//   effect: 'coverflow',
+//   grabCursor: true,
+//   centeredSlides: true,
+//   slidesPerView: 'auto',
+//   coverflowEffect: {
+//     rotate: 0,
+//     stretch: 0,
+//     depth: 100,
+//     modifier: 2,
+//     slideShadows : true,
+//     scale: 0.9
+//   },
+//  loop: true
+// });
+
 let swiper = new Swiper('.swiper-container', {
   effect: 'coverflow',
   grabCursor: true,
@@ -20,9 +36,9 @@ let swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
   coverflowEffect: {
     rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 2,
+    stretch: 250,
+    depth: 200,
+    modifier: 1,
     slideShadows : true,
     scale: 0.9
   },
