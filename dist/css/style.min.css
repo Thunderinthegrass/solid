@@ -47,6 +47,11 @@ h2 {
   font-size: 40px;
   line-height: 139.9%;
 }
+@media (max-width: 744px) {
+  h2 {
+    font-size: 35px;
+  }
+}
 
 .wrapper {
   display: -webkit-box;
@@ -644,6 +649,28 @@ a {
   }
 }
 
+.language {
+  position: absolute;
+  top: 5px;
+  left: 226px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  z-index: 10000;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.language__img {
+  opacity: 0.5;
+}
+
+.language__img:hover,
+.language__img_active {
+  opacity: 1;
+}
+
 .products {
   padding: 75px 0;
 }
@@ -875,6 +902,40 @@ a {
   width: 555px;
   height: 588px;
 }
+.projects .swiper-slide img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 744px) {
+  .projects.media .swiper-slide {
+    width: 500px;
+    height: 520px;
+  }
+  .projects.media .swiper-container {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .projects.media .swiper-slide {
+    width: 400px;
+    height: 420px;
+  }
+}
+@media (max-width: 530px) {
+  .projects.media .swiper-slide {
+    width: 350px;
+    height: 360px;
+  }
+}
+@media (max-width: 430px) {
+  .projects.media .swiper-slide {
+    width: 300px;
+    height: 350px;
+  }
+}
 
 .partners {
   padding-top: 100px;
@@ -987,6 +1048,10 @@ a {
 .contacts .contact__icon {
   position: absolute;
   top: 51px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   opacity: 1;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -1167,6 +1232,14 @@ a {
 .header .header__swiper{background-image:url(../img/header/slider-bg.webp)}
 }
 
+ @media (max-width: 744px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
  @media (max-width: 1038px){
 
 @supports (-webkit-appearance:none){
@@ -1256,6 +1329,22 @@ a {
 }
 
  @media (max-width: 638px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 530px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 430px){
 
 @supports (-webkit-appearance:none){
 

@@ -332,3 +332,19 @@
     }
   }
 }
+.language{
+  position: absolute;
+  top: 5px;
+  left: 226px;
+  display: flex;
+  gap: 5px;
+  z-index: 10000;
+  transition: .3s;
+  &__img{
+    opacity: 0.5;
+  }
+}
+.language__img:hover,
+.language__img_active {
+    opacity: 1;
+}

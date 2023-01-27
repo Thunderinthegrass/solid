@@ -65,6 +65,7 @@ function scripts() {
     'app/js/swiper.js',
     'app/js/main.js',
     'app/js/inputmask.min.js',
+    'app/js/google-translate.js',
     // 'app/js/slick.min.js'
   ])
     .pipe(concat('main.min.js'))

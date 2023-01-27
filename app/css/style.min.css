@@ -649,6 +649,28 @@ a {
   }
 }
 
+.language {
+  position: absolute;
+  top: 5px;
+  left: 226px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  z-index: 10000;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.language__img {
+  opacity: 0.5;
+}
+
+.language__img:hover,
+.language__img_active {
+  opacity: 1;
+}
+
 .products {
   padding: 75px 0;
 }
