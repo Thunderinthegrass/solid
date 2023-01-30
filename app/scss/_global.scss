@@ -140,3 +140,6 @@ body {
 .language__img {
   cursor: pointer;
 }
+.rotate{
+  transform: translateY(-50%) rotate(180deg)!important;
+}

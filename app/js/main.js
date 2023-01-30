@@ -140,5 +140,18 @@ function scrollToLink() {
 }
 scrollToLink();
 
+function dropdownBtn() {
+  let btn = document.querySelector('.dropdown-btn');
+  let item = document.querySelectorAll('language__item');
+
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('rotate');
+    item.forEach((elem) => {
+        elem.classList.toggle('d-none');
+      console.log('ggg')
+    })
+  })
+}
+dropdownBtn();
 
 

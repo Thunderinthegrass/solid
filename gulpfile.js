@@ -64,9 +64,8 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'app/js/swiper.js',
     'app/js/main.js',
-    'app/js/inputmask.min.js',
     'app/js/google-translate.js',
-    'app/js/just-validate.min.js',
+    'app/js/just-validate3.3.3.min.js',
     'app/js/script-new.js'
     // 'app/js/slick.min.js'
   ])

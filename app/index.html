@@ -13,10 +13,6 @@
 
 <body>
   <header class="header media">
-    <div class="language">
-      <img src="img/lang/lang__ru.png" alt="ru" data-google-lang="ru" class="language__img">
-      <img src="img/lang/lang__en.png" alt="en" data-google-lang="en" class="language__img">
-  </div>
     <div class="header__top" id="header-top">
       <div class="container">
         <a href="#header" class="header__logo">
@@ -41,6 +37,23 @@
           <div class="request-btn popup-path" data-path="form">Оставить заявку</div>
         </ul>
         <button class="request-btn popup-path" data-path="form">Оставить заявку</button>
+        <div class="language">
+          <div class="language__item language__img" data-google-lang="ru">
+            <div class="language__icon language__icon-ru">
+            
+            </div>
+            <span>ru</span>
+          </div>
+          <div class="language__item language__img" data-google-lang="en">
+            <div class="language__icon language__icon-en">
+
+            </div>
+            <span>en</span>
+          </div>
+          <button class="dropdown-btn">
+            <img src="img/svg/lang-arrow.svg" alt="">
+          </button>
+      </div>
       </div>
     </div>
     <div class="header__swiper" id="header">
@@ -196,13 +209,15 @@
         <img src="img/svg/close.svg" alt="">
       </button>
       <form action="#" class="form modal" data-target="form" method="POST" enctype="multipart/form-data">
+        <div class="form__logo">
+
+        </div>
         <div class="form__inner">
-          <input type="hidden" name="project_name" value="Письмецо с сайта прилетело">
+          <input type="hidden" name="project_name" value="Заявка">
           <input type="hidden" name="admin_email" value="lim8254@yandex.ru">
           <input type="hidden" name="form_subject" value="Form Subject">
           <input class="form__input input-name" type="text" data-validate-field="name" name="Name" placeholder="Имя">
           <input class="form__input input-mail" type="email" data-validate-field="email" name="E-mail" placeholder="E-mail">
-          <!-- <input class="form__input input-tel" type="tel" data-validate-field="tel" name="Phone" placeholder="Введите телефон"> -->
           <textarea class="form__input textarea" name="Сообщение" id="" cols="30" rows="10" placeholder="Комментарии"></textarea>
           <button type="submit" class="form__button">Оставить заявку</button>
         </div>

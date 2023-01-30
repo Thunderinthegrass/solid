@@ -1,31 +1,3 @@
-@font-face {
-  font-family: "RebelTypeDog";
-  src: url(../fonts/rebel-type-dog/RebelTypeDog-Regular.woff2), url(../fonts/rebel-type-dog/RebelTypeDog-Regular.woff);
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Nunito Sans";
-  src: url(../fonts/nunito-sans/NunitoSans-Light.woff2), url(../fonts/nunito-sans/NunitoSans-Light.woff);
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Nunito Sans";
-  src: url(../fonts/nunito-sans/NunitoSans-Regular.ttf), url(../fonts/nunito-sans/NunitoSans-Regular.woff);
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Nunito Sans";
-  src: url(../fonts/nunito-sans/NunitoSans-SemiBold.woff2), url(../fonts/nunito-sans/NunitoSans-SemiBold.woff);
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -194,6 +166,19 @@ h2 {
   .modal-close-btn {
     top: 70px;
   }
+}
+
+body {
+  top: 0 !important;
+}
+
+.skiptranslate {
+  display: none;
+  height: 0;
+}
+
+.language__img {
+  cursor: pointer;
 }
 
 html {
@@ -1234,8 +1219,61 @@ a {
             justify-content: start;
   }
 }
+
+.form {
+  max-width: 754px;
+  width: 100%;
+  height: 647px;
+  padding: 73px 108px;
+  background: rgba(0, 0, 0, 0.74);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 10px;
+  margin-top: 207px;
+  text-align: center;
+}
+.form__logo {
+  width: 217px;
+  height: 77px;
+  background-image: url(../img/products/modal-logo.svg);
+  margin-bottom: 35px;
+}
+.form__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.form__button {
+  background: #ff6b00;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 123.9%;
+  width: 100%;
+  padding: 23px 0;
+}
+.form__input {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 67px;
+  padding-left: 29px;
+}
+.form .textarea {
+  height: 142px;
+}
 @supports (-webkit-appearance:none){
 .header .header__swiper{background-image:url(../img/header/slider-bg.webp)}
+.form__logo{background-image:url(../img/products/modal-logo.svg)}
 }
 
  @media (max-width: 744px){
