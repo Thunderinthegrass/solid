@@ -187,6 +187,10 @@ body {
           transform: translateY(-50%) rotate(180deg) !important;
 }
 
+.d-none {
+  display: none;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -671,6 +675,9 @@ a {
           transform: translateY(-50%);
   cursor: pointer;
   padding: 6px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .language .dropdown-btn img {
   -o-object-fit: cover;

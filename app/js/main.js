@@ -142,13 +142,22 @@ scrollToLink();
 
 function dropdownBtn() {
   let btn = document.querySelector('.dropdown-btn');
-  let item = document.querySelectorAll('language__item');
+  let item = document.querySelectorAll('.language__item');
+
+  setTimeout(() => {
+    item.forEach((elem) => {
+      if (elem.classList.contains('language__img_active')) {
+        elem.classList.toggle('d-none');
+      }
+    })
+  },1000)
 
   btn.addEventListener('click', () => {
     btn.classList.toggle('rotate');
     item.forEach((elem) => {
+      if (elem.classList.contains('language__img_active') == false) {
         elem.classList.toggle('d-none');
-      console.log('ggg')
+      }
     })
   })
 }

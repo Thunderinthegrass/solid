@@ -352,6 +352,7 @@
     transform: translateY(-50%);
     cursor: pointer;
     padding: 6px;
+    transition: .3s;
     img{
       object-fit: cover;
       width: 100%;
