@@ -38,9 +38,9 @@
           <li class="header__nav-item"><a href="#projects" class="header__nav-link">Проекты</a></li>
           <li class="header__nav-item"><a href="#partners" class="header__nav-link">Партнеры</a></li>
           <li class="header__nav-item"><a href="#contacts" class="header__nav-link">Контакты</a></li>
-          <div class="request-btn">Оставить заявку</div>
+          <div class="request-btn popup-path" data-path="form">Оставить заявку</div>
         </ul>
-        <button class="request-btn">Оставить заявку</button>
+        <button class="request-btn popup-path" data-path="form">Оставить заявку</button>
       </div>
     </div>
     <div class="header__swiper" id="header">
@@ -53,7 +53,7 @@
             <p class="header__text">
               Торговая площадка ДКО Электронщик наращивает ассортимент продукции MEAN WELL и MORNSUN для организации электропитания устройств и систем промышленной автоматизации, и предлагает продукцию этих брендов по выгодным ценам.
             </p>
-            <a href="#" class="to-catalog-link">
+            <a href="#products" class="to-catalog-link">
               Перейти в каталог
             </a>
           </div>
@@ -119,10 +119,10 @@
           <p class="products__text">
             В настоящий момент у известных европейских и американских производителей имеются трудности с доступностью источников питания и другой продукции для промышленной автоматизации на российском рынке. Решения MEAN WELL и MORNSUN могут стать выгодной альтернативой. Выбрать нужное заменяемое семейство можно в таблице аналогов:
           </p>
-          <button class="request-btn">Оставить заявку</button>
+          <button class="request-btn popup-path" data-path="form">Оставить заявку</button>
         </div>
         <div class="products__names">
-          <div class="products__name" data-path="product-1">
+          <div class="products__name popup-path" data-path="product-1">
             <img src="img/products/1.jpg" alt="продукция">
             <div class="gradient"></div>
             <div class="gradient-hover"></div>
@@ -133,7 +133,7 @@
               Первая — возраст этой самой проводки. Как правило, капитальные или любые серьёзные ремонты проводят лет так через 15-20 после сдачи квартиры.  и изнашивается.
             </p>
           </div>
-          <div class="products__name" data-path="product-2">
+          <div class="products__name popup-path" data-path="product-2">
             <img src="img/products/2.jpg" alt="продукция">
             <div class="gradient"></div>
             <div class="gradient-hover"></div>
@@ -144,7 +144,7 @@
               Первая — возраст этой самой проводки. Как правило, капитальные или любые серьёзные ремонты проводят лет так через 15-20 после сдачи квартиры.  и изнашивается.
             </p>
           </div>
-          <div class="products__name" data-path="product-3">
+          <div class="products__name popup-path" data-path="product-3">
             <img src="img/products/3.jpg" alt="продукция">
             <div class="gradient"></div>
             <div class="gradient-hover"></div>
@@ -155,7 +155,7 @@
               Первая — возраст этой самой проводки. Как правило, капитальные или любые серьёзные ремонты проводят лет так через 15-20 после сдачи квартиры.  и изнашивается.
             </p>
           </div>
-          <div class="products__name" data-path="product-4">
+          <div class="products__name popup-path" data-path="product-4">
             <img src="img/products/4.jpg" alt="продукция">
             <div class="gradient"></div>
             <div class="gradient-hover"></div>
@@ -166,7 +166,7 @@
               Первая — возраст этой самой проводки. Как правило, капитальные или любые серьёзные ремонты проводят лет так через 15-20 после сдачи квартиры.  и изнашивается.
             </p>
           </div>
-          <div class="products__name" data-path="product-5">
+          <div class="products__name popup-path" data-path="product-5">
             <img src="img/products/5.jpg" alt="продукция">
             <div class="gradient"></div>
             <div class="gradient-hover"></div>
@@ -177,7 +177,7 @@
               Первая — возраст этой самой проводки. Как правило, капитальные или любые серьёзные ремонты проводят лет так через 15-20 после сдачи квартиры.  и изнашивается.
             </p>
           </div>
-          <div class="products__name" data-path="product-6">
+          <div class="products__name popup-path" data-path="product-6">
             <img src="img/products/6.jpg" alt="продукция">
             <div class="gradient"></div>
             <div class="gradient-hover"></div>
@@ -195,6 +195,18 @@
       <button class="modal-close-btn">
         <img src="img/svg/close.svg" alt="">
       </button>
+      <form action="#" class="form modal" data-target="form" method="POST" enctype="multipart/form-data">
+        <div class="form__inner">
+          <input type="hidden" name="project_name" value="Письмецо с сайта прилетело">
+          <input type="hidden" name="admin_email" value="lim8254@yandex.ru">
+          <input type="hidden" name="form_subject" value="Form Subject">
+          <input class="form__input input-name" type="text" data-validate-field="name" name="Name" placeholder="Имя">
+          <input class="form__input input-mail" type="email" data-validate-field="email" name="E-mail" placeholder="E-mail">
+          <!-- <input class="form__input input-tel" type="tel" data-validate-field="tel" name="Phone" placeholder="Введите телефон"> -->
+          <textarea class="form__input textarea" name="Сообщение" id="" cols="30" rows="10" placeholder="Комментарии"></textarea>
+          <button type="submit" class="form__button">Оставить заявку</button>
+        </div>
+      </form>
       <div class="product__modal modal" data-target="product-1">
         <div class="container">
           <div class="product__modal-logo">
@@ -332,7 +344,7 @@
             </div>
           </div>
         </div>
-        <button class="request-btn">Стать партнером</button>
+        <button class="request-btn popup-path" data-path="form">Стать партнером</button>
       </div>
     </section>
     <section class="contacts media" id="contacts">
@@ -403,14 +415,11 @@
         <li class="footer__nav-item"><a href="#partners" class="footer__nav-link">Партнеры</a></li>
         <li class="footer__nav-item"><a href="#contacts" class="footer__nav-link">Контакты</a></li>
       </ul>
-      <button class="request-btn">Оставить заявку</button>
+      <button class="request-btn popup-path" data-path="form">Оставить заявку</button>
     </div>
   </footer>
-  <script src="js/just-validate.min.js"></script>
-  <script src="js/inputmask.min.js"></script>
   <script src="js/main.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <script src="js/google-translate.js"></script>
   <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
 </body>
 

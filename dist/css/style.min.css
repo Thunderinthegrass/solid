@@ -146,6 +146,12 @@ h2 {
   z-index: 10;
   overflow-y: auto;
 }
+.modal-overlay::-webkit-scrollbar {
+  display: none;
+}
+.modal-overlay::-webkit-scrollbar-thumb {
+  display: none;
+}
 
 .modal {
   display: none;

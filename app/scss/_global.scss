@@ -85,6 +85,12 @@ h2 {
   transition: all 0.3s ease-in-out;
   z-index: 10;
   overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
 }
 .modal {
   display: none;
@@ -123,4 +129,14 @@ h2 {
   @media(max-width: 1038px) {
     top: 70px;
   }
+}
+body {
+  top: 0 !important;
+}
+.skiptranslate {
+  display: none;
+  height: 0;
+}
+.language__img {
+  cursor: pointer;
 }
