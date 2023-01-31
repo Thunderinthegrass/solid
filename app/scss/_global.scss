@@ -126,6 +126,7 @@ h2 {
   right: 10px;
   top: 10px;
   cursor: pointer;
+  z-index: 2;
   @media(max-width: 1038px) {
     top: 70px;
   }

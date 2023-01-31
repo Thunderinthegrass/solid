@@ -12,6 +12,7 @@
     width: 217px;
     height: 77px;
     background-image: url(../img/products/modal-logo.svg);
+    margin: 0 auto;
     margin-bottom: 35px;
   }
   &__inner{
@@ -39,5 +40,20 @@
   }
   .textarea{
     height: 142px;
+    padding: 20px 29px;
+  }
+}
+@media(max-width: 1200px) {
+  .form{
+    margin-top: 50px;
+  }
+}
+@media(max-width: 799px){
+  .form{
+    padding-left: 15px;
+    padding-right: 15px;
+    &__logo{
+      margin-bottom: 20px;
+    }
   }
 }

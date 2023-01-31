@@ -1,4 +1,3 @@
-console.log("привет");
 const newsSlider = new Swiper(".header__swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
@@ -69,7 +68,8 @@ function popupProducts() {
     });
   });
 }
-popupProducts();
+
+document.addEventListener("DOMContentLoaded", popupProducts);
 
 function contactHover() {
   let btn = document.querySelectorAll('.contact__btn');
@@ -102,7 +102,6 @@ function mobileMenu() {
   menuBtn.addEventListener("click", (e) => {
     menuBtn.classList.toggle("active");
     headerNav.classList.toggle("active");
-    console.log(e.target.tagName)
   });
 
   menuBtn.addEventListener('click', () => {
@@ -142,15 +141,22 @@ scrollToLink();
 
 function dropdownBtn() {
   let btn = document.querySelector('.dropdown-btn');
-  let item = document.querySelectorAll('.language__item');
+  let item = document.querySelectorAll('.language__icon');
 
-  setTimeout(() => {
-    item.forEach((elem) => {
-      if (elem.classList.contains('language__img_active')) {
-        elem.classList.toggle('d-none');
-      }
-    })
-  },1000)
+  item.forEach((elem) => {
+    if (elem.classList.contains('language__img_active') == false) {
+      elem.classList.add('d-none');
+    }
+
+    for (let i = 0; i < item.length; i++) {
+      item[i].addEventListener('click', (e) => {
+        for (let j = 0; j < item.length; j++) {
+          item[j].classList.remove('language__img_active');
+        }
+        e.target.classList.add('language__img_active');
+      })
+    }
+  })
 
   btn.addEventListener('click', () => {
     btn.classList.toggle('rotate');
@@ -160,7 +166,7 @@ function dropdownBtn() {
       }
     })
   })
+
+  
 }
 dropdownBtn();
-
-

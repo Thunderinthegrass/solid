@@ -1,53 +1,87 @@
-.projects{
-  &__title{
+.projects {
+  &__title {
     text-align: center;
     margin-bottom: 30px;
   }
-  .swiper-container{
+  .swiper-container {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
     overflow: hidden;
-   }
-   .swiper-wrapper{
+  }
+  .swiper-wrapper {
     display: inline-flex;
-   }
-    .swiper-slide{
+  }
+  .swiper-slide {
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 555px;
     height: 588px;
-    img{
-      object-fit: contain;
+    .projects__gradient {
+      opacity: 0;
+    }
+    .projects__descript {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140.4%;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      width: 100%;
+      bottom: 50px;
+      padding-left: 37px;
+      padding-right: 37px;
+      text-align: center;
+      opacity: 0;
+      transition: .3s;
+    }
+    &-active {
+      position: relative;
+      .projects__gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+        opacity: 1;
+        transition: 0.3s;
+      }
+      .projects__descript{
+        opacity: 1;
+      }
+    }
+    img {
+      object-fit: cover;
       width: 100%;
       height: 100%;
     }
   }
 }
-.projects.media{
-  @media(max-width:744px) {
-    .swiper-slide{
+.projects.media {
+  @media (max-width: 744px) {
+    .swiper-slide {
       width: 500px;
       height: 520px;
     }
-    .swiper-container{
+    .swiper-container {
       padding-top: 10px;
     }
   }
-  @media(max-width:600px) {
-    .swiper-slide{
+  @media (max-width: 600px) {
+    .swiper-slide {
       width: 400px;
       height: 420px;
     }
   }
-  @media(max-width:530px) {
-    .swiper-slide{
+  @media (max-width: 530px) {
+    .swiper-slide {
       width: 350px;
       height: 360px;
     }
   }
-  @media(max-width:430px) {
-    .swiper-slide{
+  @media (max-width: 430px) {
+    .swiper-slide {
       width: 300px;
       height: 350px;
     }
